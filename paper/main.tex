@@ -69,7 +69,10 @@ They proved $\E\,T(G,u)=O_\Delta(\sqrt n\log n)$ for connected graphs with minim
 degree $\Delta$~\cite[Theorem~1]{BGJ26}, improved this to $O(\sqrt n)$ for regular graphs with a uniform spectral
 gap~\cite[Theorem~2]{BGJ26}, showed that $\sqrt n$ is the right order on certain regular expanders~\cite[Theorem~3]{BGJ26},
 and asked whether $\E\,T(G,u)=O(\sqrt n)$ for every graph with minimum degree at least three~\cite[Question~4]{BGJ26}.
-For multigraphs the answer is negative; an example follows that question in~\cite{BGJ26}.
+For multigraphs the answer is negative; an example follows that question in~\cite{BGJ26}. The non-backtracking walk
+is a Markov chain on directed edges, and its mixing on regular graphs was studied by Alon, Benjamini, Lubetzky and
+Sodin~\cite{ABLS07} and by Lubetzky and Peres~\cite{LP16}; Theorem~2 of~\cite{BGJ26} combines the latter with the
+birthday paradox for Markov chains of Kim, Montenegro, Peres and Tetali~\cite[Theorem~3.6]{KMPT10}.
 
 Put
 \[
@@ -452,10 +455,17 @@ $A$, $H$ & $1+Q$ and $256Q(1+Q)n$ & Section~\ref{sec:proofs}\\
 \end{center}
 
 \begin{thebibliography}{99}
+\bibitem{ABLS07} N.~Alon, I.~Benjamini, E.~Lubetzky and S.~Sodin, Non-backtracking random walks mix faster,
+\emph{Commun.\ Contemp.\ Math.} \textbf{9} (2007), no.~4, 585--603. \doi{10.1142/S0219199707002551}
 \bibitem{BGJ26} F.~Bencs, L.~A.~Goldberg, M.~Jenssen, M.~Jerrum, G.~Pete, G.~Regts and Y.~Yin, On the self-intersection
 time of non-backtracking random walks, preprint, 2026, \href{https://arxiv.org/abs/2608.09729}{arXiv:2608.09729}.
 \bibitem{Doz26} B.~Dozier, The birthday paradox for non-backtracking walks on regular graphs, preprint, 2026,
 \href{https://arxiv.org/abs/2608.26321}{arXiv:2608.26321}.
+\bibitem{KMPT10} J.~H.~Kim, R.~Montenegro, Y.~Peres and P.~Tetali, A birthday paradox for Markov chains with an
+optimal bound for collision in the Pollard rho algorithm for discrete logarithm, \emph{Ann.\ Appl.\ Probab.}
+\textbf{20} (2010), no.~2, 495--521. \doi{10.1214/09-AAP625}
+\bibitem{LP16} E.~Lubetzky and Y.~Peres, Cutoff on all Ramanujan graphs, \emph{Geom.\ Funct.\ Anal.}
+\textbf{26} (2016), no.~4, 1190--1216. \doi{10.1007/s00039-016-0382-7}
 \bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026,
 \url{https://github.com/yspennstate/math-brain-public}.
 \bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research},

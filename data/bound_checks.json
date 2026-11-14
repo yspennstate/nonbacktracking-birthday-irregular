@@ -94,7 +94,7 @@
       "mean_tau_over_sqrt_n": 2.1868688918248504,
       "corollary_bound_over_sqrt_n": 62.01245489886867,
       "max_tau": 312,
-      "first_k_with_bound_below_1": 1387,
+      "first_k_with_bound_below_1": 1386,
       "walks_simple_past_that_k": 0
     },
     {
@@ -133,7 +133,7 @@
       "mean_tau_over_sqrt_n": 2.1758418119230316,
       "corollary_bound_over_sqrt_n": 61.9818756749424,
       "max_tau": 1031,
-      "first_k_with_bound_below_1": 4383,
+      "first_k_with_bound_below_1": 4382,
       "walks_simple_past_that_k": 0
     },
     {
@@ -146,7 +146,7 @@
       "mean_tau_over_sqrt_n": 1.597557511900002,
       "corollary_bound_over_sqrt_n": 110.86539382003187,
       "max_tau": 782,
-      "first_k_with_bound_below_1": 7840,
+      "first_k_with_bound_below_1": 7839,
       "walks_simple_past_that_k": 0
     },
     {
@@ -159,7 +159,7 @@
       "mean_tau_over_sqrt_n": 1.4006936807168082,
       "corollary_bound_over_sqrt_n": 175.2853605372769,
       "max_tau": 718,
-      "first_k_with_bound_below_1": 12395,
+      "first_k_with_bound_below_1": 12394,
       "walks_simple_past_that_k": 0
     }
   ]

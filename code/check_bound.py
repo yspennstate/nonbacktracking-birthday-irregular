@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """Numerical companion to the paper: exact survival probabilities on small graphs
-and Monte Carlo collision times on larger ones, compared with Theorem 1.1.
+and Monte Carlo collision times on larger ones, compared with Theorem 1.2.
 
 p_k(delta) is the probability that the non-backtracking walk started with the
-directed edge delta is vertex-simple for k steps. Theorem 1.1 gives
+directed edge delta is vertex-simple for k steps. Theorem 1.2 gives
 p_k <= 256 Q (1+Q) n / k^2 with Q = M/(m-1). The script reports
   * on small graphs, the exact value of max_{delta,k} p_k k^2 / n;
   * on larger graphs, the mean first-collision time divided by sqrt(n), next to
     the bound 32 sqrt(Q(1+Q)) + 2/sqrt(n) of Corollary 1.4, and the empirical
-    survival at lengths where the bound of Theorem 1.1 is below 1.
+    survival at lengths where the bound of Theorem 1.2 is below 1.
 These checks are not part of the proof. Pure Python 3, no dependencies.
 Usage: python code/check_bound.py  (writes data/bound_checks.json)
 """
@@ -129,7 +129,7 @@ for n in (2000, 20000):
             a = rng.randrange(n)
             start = (a, adj[a][rng.randrange(len(adj[a]))])
             times += [collision_time(adj, start) for _ in range(1000)]
-        k_star = math.ceil(math.sqrt(h)) + 1
+        k_star = math.floor(math.sqrt(h)) + 1
         survivors = sum(t > k_star for t in times) if k_star < n else None
         mc_rows.append({"n": n, "family": name, "m": m, "M": big_m, "Q": q, "walks": len(times),
                         "mean_tau_over_sqrt_n": sum(times) / len(times) / math.sqrt(n),

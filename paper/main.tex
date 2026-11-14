@@ -18,7 +18,7 @@
 \title[Non-backtracking walks on graphs of bounded degree ratio]{A birthday bound for non-backtracking walks on graphs
 of bounded degree ratio}
 \author{Yitzchak Shmalo}
-\address{Yitzchak Shmalo, Tel Aviv University and Heights Labs}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
 \email{yspennstate@gmail.com}
 \date{November 2026}
 \subjclass[2020]{05C81, 60J10, 60C05}
@@ -377,8 +377,10 @@ The ratio $Q$ enters the proof in three places: the packing bound of Lemma~\ref{
 number $\sum_vd(v)$ of directed edges with the weight $1/(d(v)-1)$ of a departure; the number of departures returning to
 $x_k$ in Lemma~\ref{lem:terminal}, which can be as large as $d(x_k)$ while each such departure may carry weight
 $1/(m-1)$; and the change of weight under excursion reversal in Lemma~\ref{lem:reversal}(b), between a departure at a
-vertex of large degree and its reversal at a vertex of small degree. On a graph in which a few vertices have very large
-degree and most have degree three, each of these losses is of order $M$, and the argument gives nothing uniform.
+vertex of large degree and its reversal at a vertex of small degree. The packing loss can be expressed through the
+average degree instead: if a bounded number of vertices have large degree and all others have degree three, then
+$\sum_vd(v)=O(n)$ and the packing bound loses only a constant factor. The terminal and reversal losses can still be
+of order $M$ on such graphs, and the argument gives no bound uniform in the degrees.
 Conjecture~\ref{conj:AP} without a bound on the degree ratio, and~\cite[Question~4]{BGJ26} in general, remain open.
 The example after~\cite[Question~4]{BGJ26} shows that some use of simplicity of the graph is necessary, since the
 analogous statements fail for multigraphs.
@@ -411,7 +413,7 @@ content of the paper and for decisions concerning its dissemination.
 \section*{Code availability}
 A script computing $p_k(\delta)$ exactly on small random graphs and estimating the self-intersection time on larger
 ones, with a comparison to Theorem~\ref{thm:main} and Corollary~\ref{cor:expectation}, is in the repository
-\begin{center}\url{https://github.com/yspennstate/nonbacktracking-birthday-irregular}.\end{center}
+\begin{center}\url{https://github.com/yspennstate/nonbacktracking-birthday-irregular/tree/v1.1}.\end{center}
 On the graphs tested, $\max_{\delta,k}p_k(\delta)k^2/n$ is at most about $2.2$, and the mean self-intersection time is
 between $1.4\sqrt n$ and $2.2\sqrt n$.
 

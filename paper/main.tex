@@ -410,6 +410,14 @@ A Codex agent (OpenAI) proved Theorem~\ref{thm:main}; a second Codex agent check
 (Anthropic) checked the steps and prepared the manuscript. The author directed the work and is responsible for the
 content of the paper and for decisions concerning its dissemination.
 
+The results rest on the work of others. Conjecture~\ref{conj:AP} is due to Alon and Peres and was stated by
+Dozier~\cite{Doz26}, who proved its fixed-degree regular case; the question on the self-intersection time is due to
+Bencs, Goldberg, Jenssen, Jerrum, Pete, Regts and Yin~\cite[Question~4]{BGJ26}. The proof follows Dozier's
+argument~\cite{Doz26}: random plans, deviations from a simple plan walk, and the pairing of returning deviations by
+reversing the excursion are his. The new steps are the weighting of deviations by $1/(d(v)-1)$, the uniform resampling
+of the local derangement at the deviating vertex (Lemmas~\ref{lem:derangement}, \ref{lem:reversal} and
+Proposition~\ref{prop:flow}), and the resulting bounds in terms of the degree ratio.
+
 \section*{Code availability}
 A script computing $p_k(\delta)$ exactly on small random graphs and estimating the self-intersection time on larger
 ones, with a comparison to Theorem~\ref{thm:main} and Corollary~\ref{cor:expectation}, is in the repository
